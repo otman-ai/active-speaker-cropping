@@ -1,0 +1,5 @@
+grpcio==1.67.1
+protobuf==5.27.2
+nvidia-riva-client
+opencv-python
+python-dotenv
