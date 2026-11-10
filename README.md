@@ -1,4 +1,4 @@
-# NVIDIA Active Speaker Crop
+# Active Speaker Cropping
 
 Standalone Python workflow that uses NVIDIA hosted ASR to diarize speech, sends
 the video, audio, and word-level speaker data to NVIDIA Active Speaker Detection

@@ -1,4 +1,4 @@
-"""NVCF preview client for NVIDIA Active Speaker Detection NIM."""
+"""Client for the hosted Active Speaker Detection service."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ def _modules():
         import grpc
     except ImportError as exc:
         raise RuntimeError(
-            "NVIDIA ASD requires grpcio. Install nvidia_speaker_crop/requirements.txt."
+            "Active Speaker Detection requires grpcio. Install requirements.txt from this project."
         ) from exc
 
     interface_root = str(Path(__file__).parent / "interfaces")

@@ -1,4 +1,4 @@
-"""End-to-end hosted Riva diarization, NVIDIA ASD, and speaker crop workflow."""
+"""End-to-end Active Speaker Cropping workflow."""
 
 from __future__ import annotations
 
@@ -36,7 +36,7 @@ def run(args):
         raise ValueError("Set NVCF_FUNCTION_ID or pass --function-id.")
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    with tempfile.TemporaryDirectory(prefix="nvidia_speaker_crop_", dir=output_path.parent) as work:
+    with tempfile.TemporaryDirectory(prefix="active_speaker_cropping_", dir=output_path.parent) as work:
         normalized_video = str(Path(work) / "streamable_video.mp4")
         audio_path = str(Path(work) / "audio.wav")
         crop_path = str(Path(work) / "speaker_crop.mp4")
@@ -88,7 +88,7 @@ def run(args):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="NVIDIA hosted ASR diarization + ASD speaker crop")
+    parser = argparse.ArgumentParser(description="Active Speaker Cropping with hosted speech diarization")
     parser.add_argument("--input", required=True, help="Input video with an audio stream")
     parser.add_argument("--output", default="speaker_crop.mp4")
     parser.add_argument("--riva-server", default=os.getenv("RIVA_SERVER", "grpc.nvcf.nvidia.com:443"))

@@ -1,4 +1,4 @@
-"""Create a speaker-following 9:16 crop from NVIDIA ASD frame detections."""
+"""Create a speaker-following 9:16 crop from active speaker detections."""
 
 from __future__ import annotations
 

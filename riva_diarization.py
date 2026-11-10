@@ -17,7 +17,7 @@ def transcribe_with_diarization(
     except ImportError as exc:
         raise RuntimeError(
             "Riva ASR requires nvidia-riva-client. Install the optional "
-            "dependencies in nvidia_speaker_crop/requirements.txt."
+            "dependencies in this project's requirements.txt."
         ) from exc
 
     metadata_args = None

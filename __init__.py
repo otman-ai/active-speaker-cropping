@@ -1,1 +1,1 @@
-"""Riva diarization + NVIDIA Active Speaker Detection crop workflow."""
+"""Active Speaker Cropping workflow with speech diarization and speaker detection."""
